@@ -15,4 +15,4 @@ while True:
         break
 cv2.destroyAllWindows()
 
-#kyu 20230307
+#kyu 20230307 a
