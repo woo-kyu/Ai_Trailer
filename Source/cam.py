@@ -14,3 +14,5 @@ while True:
     if cv2.waitKey(1)==ord('q'):
         break
 cv2.destroyAllWindows()
+
+#kyu 20230307
