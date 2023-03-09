@@ -18,7 +18,7 @@ servo.start(0)  # 서보 PWM 시작 duty = 0, duty가 0이면 서보는 동작�
 degree에 각도를 입력하면 duty로 변환후 서보 제어(ChangeDutyCycle)
 '''
 def setServoPos(degree):
-  # 각도는 180도를 넘을 수 없다.
+  # 각도는 180도를 넘을 수 없다.d
   if degree > 180:
     degree = 180
 
