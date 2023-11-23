@@ -1,4 +1,5 @@
 import Jetson.GPIO as IO
+import time
 
 # PIN OUT CONFIGURATION
 PWM_PIN = 19 # PWM signal output
@@ -22,3 +23,24 @@ def clean_up():
 
 def all_stop():
     pwm.ChangeDutyCycle(0)
+
+
+def drive_test():
+    IO.output(SPD_PIN, True)
+    for x in range(10):
+        PWM_PIN.ChangeDutyCycle(x)
+        time.sleep(0.1)
+    time.sleep(1)
+    for x in range(10, 0, -1):
+        PWM_PIN.ChangeDutyCycle(x)
+        time.sleep(0.1)
+    time.sleep(0.5)
+
+    IO.output(SPD_PIN, False)
+    for x in range(10):
+        PWM_PIN.ChangeDutyCycle(x)
+        time.sleep(0.1)
+    time.sleep(0.5)
+    for x in range(10, 0, -1):
+        PWM_PIN.ChangeDutyCycle(x)
+        time.sleep(0.1)
